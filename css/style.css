@@ -788,17 +788,23 @@ footer ul li a {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
 }
 
-.purchase_and_shipment_details .details h2 img {
-  width:50%;
-}
+
 
 .purchase_and_shipment_details h3 {
   font-family: ten-mincho-text, serif;
+  font-size:1.25em;
   text-align: center;
 }
 
+.purchase_and_shipment_details h3 span {
+  font-size:1.25em;
+  font-weight:bold;
+  padding:0 10px;
+  background: linear-gradient(transparent 60%, #F892A3 0%);
+}
+
 .purchase_and_shipment_details p {
-  font-family: 'klee','ＭＳ 明朝', 'YuMincho','TsukuARdGothic-Regular','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+  font-family: ten-mincho-text, serif;
   text-align: center;
 }
 
