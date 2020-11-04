@@ -324,7 +324,9 @@ footer ul li a {
 }
 
 .inkarami_1_2 {
-  background:pink;
+  background:url(../img/img02.png) no-repeat;
+  background-position: center;
+  background-size: cover;
   padding:40px 20px;
   font-family: ten-mincho-text, serif;
 }
@@ -368,7 +370,9 @@ footer ul li a {
   line-height: 3em;
   color:white;
   padding:8vh 0;
-  background:grey;
+  background:url(../img/img01.png) no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align:center;
   font-family: ten-mincho-text, serif;
 }
