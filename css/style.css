@@ -1,3 +1,12 @@
+@font-face
+{
+font-family: はれのそら明朝;
+src: url('https://cdn.leafscape.be/Harenosora/harenosora_web.woff2')
+     format("woff2");
+}
+
+
+
 body {
   background: url('../img/main_bg.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -92,7 +101,7 @@ footer ul li a {
   color:#1f7c9b;
   font-size:3em;
   font-style: italic;
-  font-family: ro-nikkatsu-sei-kai-std, serif;
+  font-family: はれのそら明朝, serif;
   font-weight: 400;
   font-style: normal;
 }
