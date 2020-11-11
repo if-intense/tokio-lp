@@ -32,6 +32,25 @@
 
     gtag('config', 'UA-165947641-1');
   </script>
+
+  <script>
+
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $(".link").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1500, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+
+  </script>
   
   <!-- RO Nikkatsu -->
   <script>
@@ -56,11 +75,29 @@
     })(document);
   </script>
 
+<script>
+  $(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".section").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".section").hide();
+            }
+        });
+    }).change();
+});
+</script>
+
+
+
 </head>
 
 <body>
 
-  <header></header>
+  <header>
     <!-- Just an image -->
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="index.html">
@@ -174,15 +211,15 @@
             <div class="stylist row">
               <div class="testimonials col-md-10">
               <p>髪の一本一本がしっかりするので、<br class="br_on">スタイリングがしやすい<br>
-                − Cyan 野々口氏</p>　
+                − Syan 野々口氏</p>　
               </div>
-              <div class="col-md-2">
-                <img src="img/png-img008-staff01.png" alt="野々口氏">
+              <div class="col-md-2 col-8 mobile-profile-image">
+                <img src="img/png-img008-staff01.png" alt="野々口氏" class="img-fluid">
               </div>
             </div>
             <div class="stylist row reverse">
-              <div class="col-md-2">
-                <img src="img/png-img008-staff02.png" alt="片山氏">
+              <div class="col-md-2 col-8 mobile-profile-image">
+                <img src="img/png-img008-staff02.png" alt="片山氏" class="img-fluid">
               </div>
               <div class="testimonials col-md-10">
                 <p>コーティングしてるかとかじゃなくて、<br class="br_on">ダメージを忘れるような髪質に<br>
@@ -194,8 +231,8 @@
                 <p>絶大な軽やかさと、弾力性のある<br class="br_on">プルンとした質感が魅力<br>
                   − MANHOOD 辻氏</p>
               </div>
-              <div class="col-md-2">
-                <img src="img/png-img008-staff03.png" alt="片山氏">
+              <div class="col-md-2 col-8 mobile-profile-image">
+                <img src="img/png-img008-staff03.png" alt="片山氏" class="img-fluid">
               </div>
             </div>
           <h5>TOKIO IEで、<br class="br_on">毎日サロンクオリティの<br class="br_on">ダメージケアが実現します！</h5>
@@ -382,10 +419,45 @@
       </div>
     </section>
   </div>
-
+  <div class="purchase">
+    <div class="row">
+      <div class="select col-lg-4 col-md-12 col-sm-12 no-gutters">
+        <div class="platinum column"> 
+          <h3>プラチナムシリーズ</h3>
+          <h5>どんな髪質もさらさらに！<br>抜群の洗い心地でバランス良く補修タイプ<br>レモングラスの香りでリフレッシュ</h5>
+          <p><img src="img/item001_sh_tr_500.png" class="img-fluid" alt="TOKIO IE Platinum"></p>
+          <a href="#premium" class="link">プラチナムシリーズの購入はこちら</a>
+        </div> 
+      </div>
+      <div class="select col-lg-4 col-md-12 col-sm-12 no-gutters">
+        <div class="premium column">
+          <h3>プレミアム</h3>
+          <h5>広がりを抑えて保湿！<br>まとまりにくい髪もしっとり補修タイプ<br>ジャスミン＆フルーティフローラルでリラックス</h5>
+          <p><img src="img/item005_premium_200.png" class="img-fluid" alt="TOKIO IE Premium"></p>
+          
+          <a href="#platinum" class="link">プレミアムシリーズの購入はこちら</a>
+        </div>
+      </div>
+      <div class="select col-lg-4 col-md-12 col-sm-12 no-gutters">
+        <div class="head-spa column">
+          <h3>ヘッドスパ</h3>
+          <h5>頭皮＆髪のダブルケア！<br>低刺激成分でスッキリ補修タイプ<br>レモングラスの香りでリフレッシュ</h5>
+          <p><img src="img/item006_head_spa_200.png" class="img-fluid" alt="TOKIO IE Head Spa"></p>
+          
+          <a href="#headspa" class="link">ヘッドスパシリーズの購入はこちら</a>
+        </div>
+      </div>
+    </div>   
+  </div>
   <div class="row">
+    <img src="img/tokio_ie_inkarami200.png" alt="TOKIO IE INKARAMI Platinum | Premium | Head Spa" class="img-fluid">
+  </div> 
+  <div class="row" id="premium">
+    <div class="platinum-banner col-12">
+      <h2><span>PLATINUM</span> Series</h2>
+    </div>
     <div class="shampoo-treatment st500 col-md-6 col-12">
-      <h3>シャンプー＆トリートメント900サイズ</h3>
+      <h3>シャンプー＆トリートメント500サイズ</h3>
       <div class="shampoo-treatment-item">
         <img src="img/item001_sh_tr_500.png" alt="TOKIO IE シャンプー＆トリートメント500サイズ" class="img-fluid">
         <p><em>通常価格</em><strong><span>16,800</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p>
@@ -393,7 +465,6 @@
       <div class="shampoo-treatment-purchase">
         <div class="row no-gutters">
           <div class="shampoo-treatment-subscription col-md-6 col-6">
-            <!-- <p>定期お届けコース</p> -->
             <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
           </div>
           <div class="shampoo-treatment-subscription-price col-md-6 col-6">
@@ -404,13 +475,11 @@
           <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-900';">購入はこちら</button>
           <br>
           <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-900';">単発購入はこちら</button>
-
-
         </div>
       </div>
     </div>
     <div class="shampoo-treatment st900 col-md-6 col-12">
-      <h3>シャンプー＆トリートメント500サイズ</h3>
+      <h3>シャンプー＆トリートメント900サイズ</h3>
       <div class="shampoo-treatment-item">
         <img src="img/item002_sh_tr_900.png" alt="TOKIO IE シャンプー＆トリートメント5900サイズ" class="img-fluid">
         <p><em>通常価格</em><strong><span>12,500</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p>
@@ -418,7 +487,6 @@
       <div class="shampoo-treatment-purchase">
         <div class="row">
           <div class="shampoo-treatment-subscription col-md-6 col-6">
-            <!-- <p>定期お届けコース</p> -->
             <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
           </div>
           <div class="shampoo-treatment-subscription-price col-md-6 col-6">
@@ -429,9 +497,6 @@
           <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-500';">購入はこちら</button>
           <br>
           <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-500';">単発購入はこちら</button>
-          
-
-
         </div>
       </div>
     </div>
@@ -451,6 +516,134 @@
           <p><strong><span>4,800</span>円</strong>(税別) + 送料700円</p>
       </div>
     </div>
+  </div>
+  <div class="row" id="platinum">
+    <div class="premium-banner col-12">
+      <h2><span>PREMIUM</span> Series</h2>
+    </div>
+    <div class="shampoo-treatment st500 col-md-6 col-12">
+      <h3>シャンプー＆トリートメント500サイズ</h3>
+      <div class="shampoo-treatment-item">
+        <img src="img/item007_sh_tr_500_premium.png" alt="TOKIO IE シャンプー＆トリートメント500サイズ" class="img-fluid">
+        <!-- <p><em>通常価格</em><strong><span>16,800</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p> -->
+      </div>
+      <div class="shampoo-treatment-purchase">
+        <div class="row no-gutters">
+          <div class="shampoo-treatment-subscription col-md-6 col-6">
+            <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
+          </div>
+          <div class="shampoo-treatment-subscription-price col-md-6 col-6">
+            <p><span><strong>11,300</strong>円</span>(税別)</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-900';">購入はこちら</button>
+          <br>
+          <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-900';">単発購入はこちら</button>
+        </div>
+      </div>
+    </div>
+    <div class="shampoo-treatment st900 col-md-6 col-12">
+      <h3>シャンプー＆トリートメント900サイズ</h3>
+      <div class="shampoo-treatment-item">
+        <img src="img/item008_sh_tr_900_premium.png" alt="TOKIO IE シャンプー＆トリートメント5900サイズ" class="img-fluid">
+        <!-- <p><em>通常価格</em><strong><span>12,500</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p> -->
+      </div>
+      <div class="shampoo-treatment-purchase">
+        <div class="row">
+          <div class="shampoo-treatment-subscription col-md-6 col-6">
+            <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
+          </div>
+          <div class="shampoo-treatment-subscription-price col-md-6 col-6">
+            <p><span><strong>15,300</strong>円</span>(税別)</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-500';">購入はこちら</button>
+          <br>
+          <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-500';">単発購入はこちら</button>
+        </div>
+      </div>
+    </div>
+    <div class="trial-set ts01 col-md-6 col-12">
+      <h2>トライアルセット①</h2>
+      <div class="trial-set-item">
+        <img src="img/item009_trial01_premium.png" alt="TOKIO IE" class="img-fluid">
+        <h3>シャンプー・トリートメント・オイル</h3>
+        <p><strong><span>8,500</span>円</strong>送料無料</p>
+      </div>
+    </div>
+    <div class="trial-set ts02 col-md-6 col-12">
+      <h2>トライアルセット②</h2>
+      <div class="trial-set-item">
+        <img src="img/item010_trial02_premium.png" alt="TOKIO IE" class="img-fluid">
+          <h3>シャンプー・トリートメント</h3>
+          <p><strong><span>5,700</span>円</strong>(税別) + 送料700円</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="headspa">
+    <div class="head-spa-banner col-12">
+      <h2><span>HEAD SPA</span> Series</h2>
+    </div>
+    <div class="shampoo-treatment st500 col-md-6 col-12">
+      <h3>シャンプー＆トリートメント500サイズ</h3>
+      <div class="shampoo-treatment-item">
+        <img src="img/item011_sh_tr_500_head_spa_1.png" alt="TOKIO IE シャンプー＆トリートメント500サイズ" class="img-fluid">
+        <!-- <p><em>通常価格</em><strong><span>16,800</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p> -->
+      </div>
+      <div class="shampoo-treatment-purchase">
+        <div class="row no-gutters">
+          <div class="shampoo-treatment-subscription col-md-6 col-6">
+            <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
+          </div>
+          <div class="shampoo-treatment-subscription-price col-md-6 col-6">
+            <p><span><strong>9,800</strong>円</span>(税別)</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-900';">購入はこちら</button>
+          <br>
+          <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-900';">単発購入はこちら</button>
+        </div>
+      </div>
+    </div>
+    <div class="shampoo-treatment st900 col-md-6 col-12">
+      <h3>シャンプー＆トリートメント900サイズ</h3>
+      <div class="shampoo-treatment-item">
+        <img src="img/item012_sh_tr_900_head_spa.png" alt="TOKIO IE シャンプー＆トリートメント5900サイズ" class="img-fluid">
+        <!-- <p><em>通常価格</em><strong><span>12,500</span></strong> 円(税別)<em>相当</em><br class="br_on">※初期価格</p> -->
+      </div>
+      <div class="shampoo-treatment-purchase">
+        <div class="row">
+          <div class="shampoo-treatment-subscription col-md-6 col-6">
+            <img src="img/png-img020.png" alt="定期お届けコース" class="img-fluid">
+          </div>
+          <div class="shampoo-treatment-subscription-price col-md-6 col-6">
+            <p><span><strong>15,600</strong>円</span>(税別)</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/subscription-tokio-ie-inkarami-platinum-set-500';">購入はこちら</button>
+          <br>
+          <button class="btn subscription-purchase" onclick="window.location.href='https://ifing-beauty.com/collections/tokio-ie-inkarami-platinum/products/tokio-ie-inkarami-platinum-shampoo-treatment-500';">単発購入はこちら</button>
+        </div>
+      </div>
+    </div>
+    <div class="trial-set ts01 col-md-6 col-12">
+      <h2>トライアルセット①</h2>
+      <div class="trial-set-item">
+        <img src="img/item013_sh_tr_200_trial.png" alt="TOKIO IE" class="img-fluid">
+        <h3>シャンプー・トリートメント・オイル</h3>
+        <p><strong><span>5,200</span>円</strong>送料無料</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 space">
+      <h4><img src="img/before_after.jpg" alt="ビフォー・アフター" class="img-fluid"></h4>
+    </div>
+    
+  </div>
+  <div class="row">
     <div class="col-12 one-by-one">
       <h2>単体で購入したい方はこちら</h2>
       <div class="purchase-one-by-one">

@@ -7,6 +7,8 @@ body {
 }
 
 
+
+
 .br_on {
   display: none;
 }
@@ -324,9 +326,7 @@ footer ul li a {
 }
 
 .inkarami_1_2 {
-  background:url(../img/img02.png) no-repeat;
-  background-position: center;
-  background-size: cover;
+  background:pink;
   padding:40px 20px;
   font-family: ten-mincho-text, serif;
 }
@@ -370,9 +370,7 @@ footer ul li a {
   line-height: 3em;
   color:white;
   padding:8vh 0;
-  background:url(../img/img01.png) no-repeat;
-  background-position: center;
-  background-size: cover;
+  background:grey;
   text-align:center;
   font-family: ten-mincho-text, serif;
 }
@@ -503,6 +501,143 @@ footer ul li a {
   color: #c93f25;
 }
 
+.section {
+  display: none;
+  height:73vh;
+  margin-top: 3vh;
+}
+
+.purchase {
+  padding:30px 0;
+}
+
+
+
+
+.purchase .select {
+  text-align:center;
+  /* margin:30px auto; */
+  /* background:rgba(0, 0, 0, 0.5); */
+}
+
+
+.purchase .select h3{
+  font-size: 1.25em;
+  text-align:center;
+  text-decoration: underline;
+  margin-bottom:20px;
+}
+
+.purchase .select h5 {
+  font-size:0.75em;
+  line-height: 1.5em;
+  text-align:center;
+}
+
+.purchase .column {
+  width:100%;
+  margin:0 auto;
+  background:#fff;
+  padding:40px 10px;
+  box-shadow: 2px 5px 3px rgba(105, 105, 105, 0.4);
+}
+
+.purchase .platinum a {
+  padding:20px 10px;
+  border:1px solid #73664E;
+  margin-bottom:10px;
+  color:white;
+  border-radius:5px;
+  background: rgb(240,240,240);
+  background: linear-gradient(180deg, rgba(214,214,214,1) 0%, rgba(181,181,182,1) 100%);
+}
+
+.purchase .platinum a:hover {
+  background: #9a9a9a;
+  text-decoration:none;
+}
+
+.purchase .premium a {
+  padding:20px 10px;
+  border:1px solid #73664E;
+  margin-bottom:10px;
+  color:white;
+  border-radius:5px;
+  background: rgb(246,223,149);
+  background: linear-gradient(180deg, rgba(246,223,149,1) 0%, rgba(206,167,57,1) 100%);
+}
+
+.purchase .premium a:hover {
+  background: rgba(181,140,29,1);
+  text-decoration:none;
+}
+
+.purchase .head-spa a {
+  padding:20px 10px;
+  border:1px solid #73664E;
+  margin-bottom:10px;
+  color:white;
+  border-radius:5px;
+  background: rgba(142,71,186,1);
+  background: linear-gradient(180deg, rgba(181,107,227,1) 0%, rgba(142,71,186,1) 100%);
+}
+
+.purchase .head-spa a:hover {
+  background: rgba(81,40,106,1);
+  text-decoration:none;
+}
+
+.purchase .head-spa {
+  border:3px double #51286A;
+}
+
+.purchase .premium, .purchase .platinum {
+  border:3px double #73664E;
+}
+
+.purchase .head-spa h3 {
+  color: #51286A;
+}
+
+.premium-banner {
+  background: rgb(246,223,149);
+  background: linear-gradient(180deg, rgba(246,223,149,1) 0%, rgba(206,167,57,1) 100%);
+  color:white;
+  padding:20px;
+}
+
+.premium-banner h2, .platinum-banner h2, .head-spa-banner h2 {
+  font-size:2em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-align:center;
+}
+
+.premium-banner h2 span, .platinum-banner h2 span, .head-spa-banner h2 span {
+  font-size:1.25em;
+}
+
+.platinum-banner {
+  background: rgb(240,240,240);
+  background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(181,181,182,1) 100%);
+  color:white;
+  padding:20px;
+}
+
+.head-spa-banner {
+  background:#3E2855;
+  color:white;
+  padding:20px;
+}
+
+.space {
+  background:#fff;
+  padding:20px;
+}
+
+.space h4 img {
+  box-shadow: 3px 6px 4px #9a9a9a;
+}
+
 
 /* shampoo-treatment */
 .st500 {
@@ -606,6 +741,10 @@ footer ul li a {
 .shampoo-treatment-purchase .btn {
   margin: 20px auto 10px;
 }
+
+
+
+
 
 /*subscription*/
 
@@ -805,6 +944,8 @@ footer ul li a {
   font-weight:bold;
   padding:0 10px;
   background: linear-gradient(transparent 60%, #F892A3 0%);
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  transform: rotate(-20deg);
 }
 
 .purchase_and_shipment_details p {
@@ -835,7 +976,7 @@ footer ul li a {
   } */
 
   .top-banner h3 {
-    font-size:1.25em;
+    font-size:1.25em
   }
 
   .subscription .limited-for-subscription-only p {
@@ -945,3 +1086,15 @@ footer ul li a {
 
 
 
+ @media (max-width: 575.98px) { 
+  .mobile-profile-image {
+    padding:1vh;
+    margin:0 auto 2vh;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  /* .stylist {
+    border:1px solid rgba(0, 0, 0, 0.2);
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.6)
+  } */
+}
